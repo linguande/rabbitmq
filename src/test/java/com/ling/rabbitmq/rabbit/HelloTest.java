@@ -1,7 +1,9 @@
 package com.ling.rabbitmq.rabbit;
 
+import com.ling.rabbitmq.service.HelloSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,12 +16,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class HelloTest {
 
-    //@Autowired
-    //private HelloSender helloSender;
+    @Autowired
+    private HelloSender helloSender;
 
     @Test
     public void hello() throws Exception{
-        //helloSender.send();
-        System.out.println("111");
+        helloSender.send();
     }
 }
