@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @description: 接收者
  * @author: linguande
- * @create: 2018-06-12 17:56
+ * @create: 2018-06-12 17:52
  **/
 @Component
 @RabbitListener(queues = "hello")
