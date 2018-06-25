@@ -1,6 +1,6 @@
 package com.ling.rabbitmq.rabbit;
 
-import com.ling.rabbitmq.oneToMany.Sender;
+import com.ling.rabbitmq.many.Sender1;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +14,15 @@ import org.springframework.test.context.junit4.SpringRunner;
  **/
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OneToManyTest {
+public class ManyTest {
 
     @Autowired
-    private Sender sender;
+    private Sender1 sender1;
 
     @Test
-    public void oneToMany() throws Exception{
-        for(int i=0;i<100;i++){
-            sender.send(String.valueOf(i));
+    public void Many() throws Exception {
+        for (int i = 0; i < 50; i++) {
+            sender1.send(i);
         }
     }
 }

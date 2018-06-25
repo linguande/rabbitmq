@@ -1,4 +1,4 @@
-package com.ling.rabbitmq.oneToMany;
+package com.ling.rabbitmq.many;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +10,13 @@ import org.springframework.stereotype.Component;
  * @create: 2018-06-22 18:03
  **/
 @Component
-public class Sender {
+public class Sender1 {
 
     @Autowired
     private AmqpTemplate amqpTemplate;
 
-    public void send(String i){
-        this.amqpTemplate.convertAndSend("many",i);
+    public void send(int i){
+        String content = "queue  *** "+i;
+        this.amqpTemplate.convertAndSend("many",content);
     }
 }
