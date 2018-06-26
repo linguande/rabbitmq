@@ -17,8 +17,13 @@ public class RabbitConfig {
     }
 
     @Bean
-    public Queue manyQueue(){
+    public Queue manyQueue() {
         return new Queue("many");
+    }
+
+    @Bean
+    public Queue objectQueue() {
+        return new Queue("object");
     }
 
 }
