@@ -5,18 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * @description: 生产者
+ * @description: 发送者2
  * @author: linguande
- * @create: 2018-06-22 18:03
+ * @create: 2018-06-26 11:25
  **/
 @Component
-public class Sender1 {
+public class Sender2 {
 
     @Autowired
     private AmqpTemplate amqpTemplate;
 
     public void send(int i){
-        String content = "sender1  *** "+i;
+        String content = "sender2  *** "+i;
         this.amqpTemplate.convertAndSend("many",content);
     }
 }
