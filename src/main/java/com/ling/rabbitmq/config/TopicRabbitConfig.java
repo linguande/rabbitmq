@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @description:
  * @author: linguande
- * @create: 2018-06-26 17:29
+ * @create: 2018-06-26 17:20
  **/
 @Configuration
 public class TopicRabbitConfig {
