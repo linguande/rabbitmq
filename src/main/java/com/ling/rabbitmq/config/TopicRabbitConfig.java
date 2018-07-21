@@ -17,16 +17,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TopicRabbitConfig {
     private static String message = "topic.message";
-    private static String messages = "topic.message";
+    private static String messages = "topic.messages";
 
     @Bean
     public Queue queueManage(){
-        return new Queue(TopicRabbitConfig.message);
+        return new Queue(message);
     }
 
     @Bean
     public Queue queueManages(){
-        return new Queue(TopicRabbitConfig.messages);
+        return new Queue(messages);
     }
 
     @Bean
